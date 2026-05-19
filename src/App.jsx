@@ -58,7 +58,7 @@ export default function App() {
 				</p>
 				<PrinciplesGrid />
 			</section>
-			<div class="footnote">
+			<div className="footnote">
 				This material has been prepared as part of the research work developed
 				for the paper entitled “A Decision-Support Framework for Compliance in
 				Serious Game Validation”, submitted to the Simposio Internacional de
