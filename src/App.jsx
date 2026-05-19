@@ -1,6 +1,7 @@
 import "./App.css";
 import QuestionTable from "./QuestionTable";
 import PrinciplesGrid from "./PrinciplesGrid";
+import GeneralRequirementsPanel from "./GeneralRequirementsPanel";
 
 export default function App() {
 	return (
@@ -34,6 +35,15 @@ export default function App() {
 				</p>
 				<QuestionTable />
 			</section>
+			<section>
+				<p>
+					{" "}
+					The framework also includes a summary of general GDPR compliance
+					requirements that apply to processing activities.
+				</p>
+				<GeneralRequirementsPanel />
+			</section>
+
 			<br />
 			<section>
 				<p>

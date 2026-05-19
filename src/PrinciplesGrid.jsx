@@ -115,7 +115,12 @@ export default function PrinciplesGrid() {
 					</table>
 				</div>
 				<p>
-					In case of processing children's personal data: <br />
+					<br />
+					<div style={{ fontWeight: "bold" }}>
+						In case of processing children's personal data (from the ICO
+						fundamentally Games guideline):
+					</div>{" "}
+					<br />
 					1. Children under 16 (or lower if a Member State sets) require
 					parental consent for online services processing personal data (Art.
 					8). Controllers must make “reasonable efforts” to verify parental
