@@ -1,0 +1,430 @@
+.app-root {
+	max-width: 980px;
+	margin: 40px auto;
+	padding: 24px;
+	background: transparent;
+	color: #e6eef8;
+}
+
+.app-root h1 {
+	font-size: 20px;
+	margin: 0 0 8px 0;
+	color: #fff;
+}
+.app-root p {
+	margin: 0 0 12px 0;
+	color: #94a3b8;
+	line-height: 1.6;
+}
+
+.app-root a {
+	color: #60a5fa;
+	text-decoration: underline;
+}
+
+.principles-section {
+	margin-top: 32px;
+	background: rgba(255, 255, 255, 0.04);
+	padding: 20px;
+	border-radius: 14px;
+	border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.principles-section h2 {
+	margin: 0 0 12px 0;
+	font-size: 20px;
+	color: #f8fbff;
+}
+
+.principles-note {
+	margin: 0 0 16px 0;
+	color: #94a3b8;
+	line-height: 1.5;
+}
+
+.principles-table {
+	width: 100%;
+	border-collapse: collapse;
+	min-width: 1024px;
+}
+
+.principles-table th,
+.principles-table td {
+	padding: 12px 14px;
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	text-align: left;
+}
+
+.principles-table thead th {
+	position: sticky;
+	top: 0;
+	z-index: 7;
+	/* solid background so underlying cells don't show through */
+	background: #071226;
+	font-weight: 700;
+	color: #dbeffd;
+}
+
+.principles-table th.header-split {
+	position: relative;
+	overflow: hidden;
+	min-width: 220px;
+}
+
+/* Ensure the top-left split header sticks to the top-left corner */
+.principles-table th.header-split {
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	background: #071226; /* solid base for diagonal treatment */
+}
+
+.principles-table th.header-split::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200%;
+	height: 200%;
+	/* subtle diagonal color but keep overall opaque due to base background */
+	background: linear-gradient(
+		135deg,
+		rgba(96, 165, 250, 0.12) 45%,
+		rgba(124, 58, 237, 0.1) 45%
+	);
+	pointer-events: none;
+}
+
+.principles-table th.header-split span {
+	position: relative;
+	display: inline-block;
+	width: 50%;
+	padding: 4px 6px;
+	font-weight: 700;
+}
+
+.principles-table th.header-split .header-left {
+	text-align: left;
+}
+
+.principles-table th.header-split .header-right {
+	text-align: right;
+}
+
+.principles-table tbody tr:nth-child(odd) {
+	background: rgba(255, 255, 255, 0.02);
+}
+
+.row-label {
+	background: rgba(96, 165, 250, 0.08);
+	font-weight: 700;
+	color: #dbeffd;
+}
+
+/* Make the left-most WP29 criterion column sticky when scrolling horizontally */
+.principles-table th.row-label {
+	position: sticky;
+	left: 0;
+	z-index: 8;
+	/* solid background to avoid transparency when scrolling */
+	background: #0b2942;
+	color: #dbeffd;
+}
+
+.blank-cell {
+	min-height: 38px;
+}
+
+@media (max-width: 1024px) {
+	.principles-table {
+		min-width: 0;
+	}
+}
+
+.table-section {
+	margin-top: 28px;
+	background: rgba(255, 255, 255, 0.04);
+	padding: 20px;
+	border-radius: 14px;
+	border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.table-section h2 {
+	margin: 0 0 16px 0;
+	color: #f8fbff;
+	font-size: 20px;
+}
+
+.table-wrap {
+	overflow: auto;
+}
+
+.question-table {
+	width: 100%;
+	border-collapse: collapse;
+	min-width: 720px;
+}
+
+.question-table th,
+.question-table td {
+	padding: 14px 16px;
+	text-align: left;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.question-table thead th {
+	background: rgba(255, 255, 255, 0.04);
+	font-weight: 700;
+	color: #dbeffd;
+}
+
+.question-table tbody tr:nth-child(odd) {
+	background: rgba(255, 255, 255, 0.02);
+}
+
+.category-cell {
+	background: rgba(96, 165, 250, 0.08);
+	font-weight: 700;
+	vertical-align: top;
+	color: #dbeffd;
+	width: 230px;
+}
+
+.question-cell {
+	color: #c7d7f4;
+}
+
+@media (max-width: 820px) {
+	.question-table {
+		min-width: 0;
+	}
+}
+
+.counter {
+	font-size: 16px;
+	padding: 5px 10px;
+	border-radius: 5px;
+	color: var(--accent);
+	background: var(--accent-bg);
+	border: 2px solid transparent;
+	transition: border-color 0.3s;
+	margin-bottom: 24px;
+
+	&:hover {
+		border-color: var(--accent-border);
+	}
+	&:focus-visible {
+		outline: 2px solid var(--accent);
+		outline-offset: 2px;
+	}
+}
+
+.hero {
+	position: relative;
+
+	.base,
+	.framework,
+	.vite {
+		inset-inline: 0;
+		margin: 0 auto;
+	}
+
+	.base {
+		width: 170px;
+		position: relative;
+		z-index: 0;
+	}
+
+	.framework,
+	.vite {
+		position: absolute;
+	}
+
+	.framework {
+		z-index: 1;
+		top: 34px;
+		height: 28px;
+		transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
+			scale(1.4);
+	}
+
+	.vite {
+		z-index: 0;
+		top: 107px;
+		height: 26px;
+		width: auto;
+		transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
+			scale(0.8);
+	}
+}
+
+#center {
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+	place-content: center;
+	place-items: center;
+	flex-grow: 1;
+
+	@media (max-width: 1024px) {
+		padding: 32px 20px 24px;
+		gap: 18px;
+	}
+}
+
+#next-steps {
+	display: flex;
+	border-top: 1px solid var(--border);
+	text-align: left;
+
+	& > div {
+		flex: 1 1 0;
+		padding: 32px;
+		@media (max-width: 1024px) {
+			padding: 24px 20px;
+		}
+	}
+
+	.icon {
+		margin-bottom: 16px;
+		width: 22px;
+		height: 22px;
+	}
+
+	@media (max-width: 1024px) {
+		flex-direction: column;
+		text-align: center;
+	}
+}
+
+#docs {
+	border-right: 1px solid var(--border);
+
+	@media (max-width: 1024px) {
+		border-right: none;
+		border-bottom: 1px solid var(--border);
+	}
+}
+
+#next-steps ul {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	gap: 8px;
+	margin: 32px 0 0;
+
+	.logo {
+		height: 18px;
+	}
+
+	a {
+		color: var(--text-h);
+		font-size: 16px;
+		border-radius: 6px;
+		background: var(--social-bg);
+		display: flex;
+		padding: 6px 12px;
+		align-items: center;
+		gap: 8px;
+		text-decoration: none;
+		transition: box-shadow 0.3s;
+
+		&:hover {
+			box-shadow: var(--shadow);
+		}
+		.button-icon {
+			height: 18px;
+			width: 18px;
+		}
+	}
+
+	@media (max-width: 1024px) {
+		margin-top: 20px;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		li {
+			flex: 1 1 calc(50% - 8px);
+		}
+
+		a {
+			width: 100%;
+			justify-content: center;
+			box-sizing: border-box;
+		}
+	}
+}
+
+#spacer {
+	height: 88px;
+	border-top: 1px solid var(--border);
+	@media (max-width: 1024px) {
+		height: 48px;
+	}
+}
+
+.ticks {
+	position: relative;
+	width: 100%;
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		top: -4.5px;
+		border: 5px solid transparent;
+	}
+
+	&::before {
+		left: 0;
+		border-left-color: var(--border);
+	}
+	&::after {
+		right: 0;
+		border-right-color: var(--border);
+	}
+}
+p {
+	text-align: left;
+}
+.diagonal-header {
+	position: relative;
+	width: 200px;
+	height: 80px;
+	overflow: hidden;
+	padding: 0;
+}
+
+.diagonal-header::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 150%;
+	height: 2px;
+	background: #000;
+	transform: rotate(39deg);
+	transform-origin: left top;
+}
+
+.wp29 {
+	position: absolute;
+	bottom: 8px;
+	left: 8px;
+	font-size: 12px;
+}
+
+.gdpr {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	font-size: 12px;
+	line-height: 15px;
+}
+.footnote {
+	text-align: left;
+	font-size: 0.8em;
+	bottom: 0;
+	left: 0;
+}
