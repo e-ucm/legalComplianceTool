@@ -72,7 +72,7 @@ export default function App() {
 				This material has been prepared as part of the research work developed
 				for the paper entitled “A Decision-Support Framework for GDPR Compliance
 				and Data Protection Impact Assessment in Serious Games Validation”,
-				submitted to the Simposio Internacional de Informática Educativa (SIIE
+				accepted to the Simposio Internacional de Informática Educativa (SIIE
 				2026).
 			</div>
 		</main>
